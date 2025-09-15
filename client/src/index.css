@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.leaflet-container {
+  height: 600px;
+  width: 100%;
+}
+
+/* small visual styling */
+.voice-btn {
+  @apply px-4 py-2 rounded-md text-white;
+}
