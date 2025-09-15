@@ -10,13 +10,13 @@ app.use(express.json());
 let mockVehicles = {
   "vehicle 1": { lat: 37.7749, lng: -122.4194, driver: null, location: "San Francisco" },
   "vehicle 2": { lat: 34.0522, lng: -118.2437, driver: null, location: "Los Angeles" },
-  "toyota": { lat: 40.7128, lng: -74.0060, driver: null, location: "New York" },
+  "vehicle 3": { lat: 40.7128, lng: -74.0060, driver: null, location: "New York" },
 };
 
 let drivers = [
-  { id: 1, driverName: "Ramesh" },
-  { id: 2, driverName: "Kalai" },
-  { id: 3, driverName: "Gokul" },
+  { id: 1, driverName: "Driver 1" },
+  { id: 2, driverName: "Driver 2" },
+  { id: 3, driverName: "Driver 3" },
 ];
 
 // Number words → digits for "vehicle one" parsing
