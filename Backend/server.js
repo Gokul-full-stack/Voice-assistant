@@ -8,15 +8,15 @@ app.use(express.json());
 
 // Mock dataset (drivers start unassigned)
 let mockVehicles = {
-  "vehicle 1": { lat: 37.7749, lng: -122.4194, driver: null, location: "San Francisco" },
-  "vehicle 2": { lat: 34.0522, lng: -118.2437, driver: null, location: "Los Angeles" },
-  "vehicle 3": { lat: 40.7128, lng: -74.0060, driver: null, location: "New York" },
+  "vehicle a": { lat: 37.7749, lng: -122.4194, driver: null, location: "San Francisco" },
+  "vehicle b": { lat: 34.0522, lng: -118.2437, driver: null, location: "Los Angeles" },
+  "vehicle c": { lat: 40.7128, lng: -74.0060, driver: null, location: "New York" },
 };
 
 let drivers = [
-  { id: 1, driverName: "Driver 1" },
-  { id: 2, driverName: "Driver 2" },
-  { id: 3, driverName: "Driver 3" },
+  { id: 1, driverName: "sam" },
+  { id: 2, driverName: "vasu" },
+  { id: 3, driverName: "mani" },
 ];
 
 // Number words → digits for "vehicle one" parsing
