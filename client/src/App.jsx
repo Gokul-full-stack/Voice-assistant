@@ -78,7 +78,7 @@ function App() {
   // Fetch vehicles
   const fetchVehicles = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/vehicles");
+      const res = await fetch("https://voice-assistant-cn82.onrender.com/api/vehicles");
       const data = await res.json();
       setVehicles(data);
 
@@ -95,7 +95,7 @@ function App() {
   const sendCommand = async (text) => {
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:5000/api/command", {
+      const res = await fetch("https://voice-assistant-cn82.onrender.com/api/command", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ transcript: text }),
@@ -296,12 +296,6 @@ function App() {
   </div>
 
 </div>
-
-     
-
-      {/* Mic button */}
-    
-
       {/* Confirmation Modal */}
       <ConfirmModal
         show={showModal}
