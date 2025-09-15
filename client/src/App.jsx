@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import Navbar from "./component/Navbar";
@@ -145,6 +146,16 @@ function App() {
     fetchVehicles();
   }, []);
 
+  const customIcon = L.icon({
+  iconUrl: "/icons/marker-icon.png",   // ✅ from public folder
+  shadowUrl: "/icons/marker-shadow.png",
+  iconSize: [25, 41], // default Leaflet size
+  iconAnchor: [12, 41], 
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41],
+});
+
+
   return (
     <div className="h-screen w-full relative">
       {/* Navbar */}
@@ -164,7 +175,7 @@ function App() {
 
        {Object.entries(vehicles).map(([name, data]) =>
   selected[name] && (
-    <Marker key={name} position={[data.lat, data.lng]}>
+    <Marker key={name} position={[data.lat, data.lng]} icon={customIcon}>
       <Popup>
         <div className="w-64 p-3 bg-white rounded shadow-md text-sm">
           {/* Header */}
