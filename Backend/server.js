@@ -3,7 +3,7 @@ import express from "express";
 import cors from "cors";
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: "https://verizonvoiceassistant.netlify.app" }));
 app.use(express.json());
 
 // Mock dataset (drivers start unassigned)
