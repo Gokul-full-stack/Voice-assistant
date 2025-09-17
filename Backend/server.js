@@ -20,9 +20,9 @@ let mockVehicles = {
 };
 
 let drivers = [
-  { id: 1, driverName: "sam" },
-  { id: 2, driverName: "vasu" },
-  { id: 3, driverName: "mani" },
+  { id: 1, driverName: "alex" },
+  { id: 2, driverName: "john" },
+  { id: 3, driverName: "sam" },
 ];
 
 // Number words → digits for "vehicle one" parsing
